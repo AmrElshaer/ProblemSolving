@@ -1,18 +1,4 @@
-﻿// s t
-// a b
-// m n
-// m
-// n
-
-
-//7 11
-//5 15
-//3 2
-//- 2 2 1
-//5 - 6
-// [3,7,6]
-//[20,9]
-using ProblemSolving;
+﻿using ProblemSolving.Core;
 
 string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
 

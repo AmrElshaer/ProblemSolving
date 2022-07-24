@@ -1,3 +1,5 @@
+using ProblemSolving.Core;
+
 namespace ProblemSolving.Test
 {
     public class Apply_and_Orange_Test

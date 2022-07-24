@@ -1,4 +1,6 @@
-﻿namespace ProblemSolving.Test
+﻿using ProblemSolving.Core;
+
+namespace ProblemSolving.Test
 {
     public class choreographing_Test
     {

@@ -1,4 +1,4 @@
-﻿namespace ProblemSolving
+﻿namespace ProblemSolving.Core
 {
     public class Apple_and_Orange
     {
