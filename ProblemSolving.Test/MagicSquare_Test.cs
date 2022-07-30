@@ -8,7 +8,7 @@ namespace ProblemSolving.Test
        new List<object[]>
        {
             new object[] { new List<List<int>> { new List<int> {5, 3 ,4 },
-            new List<int> { 1, 5 ,8 } , new List<int> { 6 ,4, 2}},7}
+            new List<int> { 1, 5 ,8 } , new List<int> { 6 ,4, 2}},5}
        };
         [Theory]
         [MemberData(nameof(TestGetSquare))]
