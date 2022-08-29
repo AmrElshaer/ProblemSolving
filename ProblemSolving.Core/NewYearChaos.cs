@@ -4,44 +4,45 @@
     {
         public static string GetNumberOfBribes(List<int> q)
         {
-            int n = q.Count;
 
-            int x, y = 0;
 
-            for (int j = 0; j < n; j++)
+            if (IsTooChaotic(q)) return "Too chaotic";
+            return GetBribes(q).ToString();
+        }
+
+        private static int GetBribes(List<int> q)
+        {
+            var y = 0;
+            var n = q.Count;
+            for (var k = 0; k < n; k++)
             {
-
-
-                if (q[j] - j > 3)
-                {
-                    y = -1;
-                }
-            }
-
-            if (y == -1)
-            {
-                return "Too chaotic";
-            }
-
-            int yr;
-            for (int k = 0; k < n; k++)
-            {
-                yr = y;
-                for (int j = 0; j < n - 1; j++)
+                var yr = y;
+                for (var j = 0; j < n - 1; j++)
                 {
                     if (q[j] > q[j + 1])
                     {
-                        x = q[j];
-                        q[j] = q[j + 1];
-                        q[j + 1] = x;
+                        (q[j], q[j + 1]) = (q[j + 1], q[j]);
                         y++;
                     }
                 }
+
                 if (yr == y)
                     break;
             }
 
-            return y.ToString();
+            return y;
+        }
+
+        private static bool IsTooChaotic(List<int> q)
+        {
+            for (var j = 0; j < q.Count; j++)
+            {
+                if (q[j] - j > 3)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
